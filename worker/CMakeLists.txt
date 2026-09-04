@@ -1,0 +1,5 @@
+add_library(ExecutionFabricWorker STATIC worker.cpp)
+target_link_libraries(ExecutionFabricWorker PUBLIC ExecutionFabricProtocol)
+target_include_directories(ExecutionFabricWorker PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..)
+add_executable(ef_worker worker_main.cpp)
+target_link_libraries(ef_worker PRIVATE ExecutionFabricWorker)

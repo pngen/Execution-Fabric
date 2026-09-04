@@ -1,0 +1,2 @@
+add_executable(ef_benchmark benchmark.cpp)
+target_link_libraries(ef_benchmark PRIVATE ExecutionFabric ExecutionFabricProtocol)

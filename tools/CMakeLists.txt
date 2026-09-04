@@ -1,0 +1,2 @@
+add_executable(ef_inspect ef_inspect.cpp)
+target_link_libraries(ef_inspect PRIVATE ExecutionFabric)

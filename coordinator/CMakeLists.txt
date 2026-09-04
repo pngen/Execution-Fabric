@@ -1,0 +1,5 @@
+add_library(ExecutionFabricCoordinator STATIC coordinator.cpp)
+target_link_libraries(ExecutionFabricCoordinator PUBLIC ExecutionFabricProtocol)
+target_include_directories(ExecutionFabricCoordinator PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..)
+add_executable(ef_coordinator coordinator_main.cpp)
+target_link_libraries(ef_coordinator PRIVATE ExecutionFabricCoordinator)
